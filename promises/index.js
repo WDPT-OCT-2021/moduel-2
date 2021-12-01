@@ -120,3 +120,46 @@ console.log(value3);
 // rare - chaining then()
 
 // additional build in methods for promises are .resolve() and .reject() to force a resolution or rejection. (usually used when testing promises or created test driven code [TDD] for your codebase)
+
+// =============== Async/Await ===================
+
+// creating a promise
+// const myThirdFunc = new Promise( (resolve, reject) => {
+//   const random = Math.floor(Math.random() * 27);
+//   setTimeout(() => {
+//     if(random % 1 === 0) {
+//       console.log('the second promise!');
+//       resolve(random);
+//     } else {
+//       console.log('This Failed on the second promise!!');
+//       // reject(`Error => ${random}`);
+//       throw new Error(`Error => ${random}`);
+//     }
+//   }, 2000)
+// })
+
+// calling async on a function makes it return a promise but does not make it a promise so therefor it is not a pure promise and await will not work on it.
+const myPromiseFunc = async () => {
+    const random = Math.floor(Math.random() * 27);
+    setTimeout(() => {
+        if (random % 11 === 0) {
+            console.log("the return");
+            return random;
+        } else {
+            console.log("the failure");
+            return `Error => ${random}`;
+        }
+    }, 2000);
+};
+
+async function callThis() {
+    // await must be called inside of an async function in order for it to work
+
+    // await will not wait for the response of a non pure promise before moving on in the code base.
+
+    // const result = await myPromiseFunc()
+    const result = await myThirdFunc;
+    console.log("see, its a promise!", result);
+}
+
+callThis();
