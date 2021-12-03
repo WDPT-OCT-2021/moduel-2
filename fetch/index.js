@@ -120,8 +120,8 @@ window.addEventListener("load", (event) => {
 });
 
 /* 
-1. uninstall node
-2. install nvm
+1. uninstall node (npm uninstall node)
+2. install nvm (npm install -g nvm)
 3. nvm install lts
 4. nvm install @12
 5. type: which node (to see node version)
