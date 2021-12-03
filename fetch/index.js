@@ -122,7 +122,7 @@ window.addEventListener("load", (event) => {
 /* 
 1. uninstall node (npm uninstall node)
 2. install nvm (npm install -g nvm)
-3. nvm install lts
+3. nvm install --lts 
 4. nvm install @12
 5. type: which node (to see node version)
 6. if node version is not 12 then enter: nvm use 12
