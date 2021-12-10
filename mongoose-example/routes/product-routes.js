@@ -40,4 +40,4 @@ router.get("/details/:productId", (req, res, next) => {
 
 module.exports = router;
 
-// ********* The main methods you will be working with, will be .find(), .findOne(), .findById(), .finByIdAndDelete(), .findByIdAndRemove(), .create() *************
+// ********* The main methods you will be working with, will be .find(), .findOne(), .findById(), .finByIdAndDelete(), .findByIdAndRemove(), .findAndDelete(), .findByIdAndUpdate, .findAndUpdate(), .create() *************
