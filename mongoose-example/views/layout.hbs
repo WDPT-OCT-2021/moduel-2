@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    {{!-- to have a nav bar display on all your pages, you would set up the nav bar in your layout --}}
+    <nav>
+        <a href="/">Home</a>
+        {{!-- make sure your href matches what you created as the end point for your route in order to go to the page you want. --}}
+        <a href="/products">Products</a>
+    </nav>
+
+    {{!-- any page to be displayed will show up here, in order to do so, we must initiate the view display method for the body of the content --}}
+    {{{body}}}
+    {{!-- when setting up the layout, add triple curly with body in order to have hbs display ur view pages as the body of the layout content. --}}
+    <script src="/index.js"></script>
+</body>
+
+</html>

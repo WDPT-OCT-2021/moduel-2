@@ -1,0 +1,26 @@
+<h2>Products List</h2>
+
+{{!-- <div>
+    {{#each products}}
+    {{#if inStock}}
+    <div>
+        <h3>{{this.name}}</h3>
+        <h4>{{price}}</h4>
+    </div>
+    {{/if}}
+    {{/each}}
+</div> --}}
+
+<div>
+    {{#each products}}
+    <div>
+        <a href="/products/details/{{_id}}">
+            <h3>{{name}}</h3>
+        </a>
+        {{!-- <h3>{{this.name}}</h3> --}}
+        {{!-- <h4>{{price}}</h4> --}}
+        <h5>this product {{#if inStock}} is {{else}} is not {{/if}} in stock</h5>
+        {{!-- <a href="/product/details/{{this.id}}">Details</a> --}}
+    </div>
+    {{/each}}
+</div>
